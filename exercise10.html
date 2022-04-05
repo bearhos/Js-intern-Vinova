@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    p{
+        display: inline;
+    }
+</style>
+<body style="display: inline-block;">
+    <div style="display: inline-block;">
+        <p class="a">50</p> <p></p> <p class="b">50</p> = <p class="c"> 100</p>
+        <label>Nhap phep tinh </label>
+        <input type="text" class="calculation">
+        <button onclick=handle()>OK</button>
+    </div>
+    <p>kết quả: </p>
+</body>
+<script>
+    
+   const a = parseFloat(document.querySelector('.a').innerText)
+   const b = parseFloat(document.querySelector('.b').innerText)
+   const c = parseFloat(document.querySelector('.c').innerText)
+   const emulation = document.querySelector(".calculation")
+   
+   const handle  = ()=> {
+       const equa = emulation.value
+       const arr = [a,equa,b]
+       const result = eval(arr.join(''))
+       console.log(result===c)
+   }
+
+   
+</script>
+</html>

@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label > Nhập a</label>
+        <input type="text" class="inputA" >
+    </div>
+    <div>
+        <label > Nhập b</label>
+        <input type="text" class="inputB">
+    </div>
+    <button onclick=output()>tìm một giá trị gần nhất với 100 </button>
+    <p>Kết quả: <p class="result"></p> </p>
+</body>
+<script >
+const output = () =>{
+    const a = document.querySelector('.inputA')
+    const b = document.querySelector('.inputB')
+    const arr = [a.value,b.value]
+    const goal = 100
+    const closest = arr.reduce((prev, curr) => {
+  return (Math.abs(curr - goal) < Math.abs(prev - goal) ? curr : prev);
+});
+    const result = document.querySelector('.result').innerHTML = closest 
+    
+}
+
+</script>
+</html>

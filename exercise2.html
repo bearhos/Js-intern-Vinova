@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <label > Nhập a</label>
+        <input type="text" class="inputA" >
+    </div>
+    <div>
+        <label > Nhập b</label>
+        <input type="text" class="inputB">
+    </div>
+    <button onclick=output()>tìm gia tri trong mang </button>
+    <p>Kết quả: <p class="result"></p> </p>
+</body>
+<script >
+const output = () =>{
+    const a = document.querySelector('.inputA')
+    const b = document.querySelector('.inputB')
+    const arr = [a.value,b.value].reduce((prev,curr) => {
+
+        if ((prev&&curr >100)||(prev&&curr<40)) {
+            alert('xin nhap so lon hon 40 va nho hon 100')
+        }
+        else{
+            if (prev&&curr <60){
+                const result = document.querySelector('.result').innerHTML = ('mang tu 40..60') 
+            }
+            else{
+                const result = document.querySelector('.result').innerHTML = ('mang tu 70..100') 
+            }
+        }
+    })
+    
+    
+}
+
+</script>
+</html>
